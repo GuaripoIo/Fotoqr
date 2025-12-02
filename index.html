@@ -20,19 +20,21 @@
 </head>
 <body>
 
-  <img id="randomImage">
+  <img id="randomImage" alt="Foto sorpresa">
 
   <script>
+    // Usa exactamente los nombres que aparecen en tu repositorio
     const images = [
-      "https://guaripoio.github.io/Fotoqr/Polish_20251202_173237970.png",
-      "https://guaripoio.github.io/Fotoqr/Polish_20251202_173103868.png",
-      "https://guaripoio.github.io/Fotoqr/Polish_20251202_173823403.jpg",
-      "https://guaripoio.github.io/Fotoqr/Polish_20251202_174127577.jpg",
-      "https://guaripoio.github.io/Fotoqr/Polish_20251202_174346498.jpg"
+      "Polish_20251202_173237970.png",
+      "Polish_20251202_173103868.png",
+      "Polish_20251202_173823403.jpg",
+      "Polish_20251202_174127577.jpg",
+      "Polish_20251202_174346498.jpg"
     ];
 
     const randomIndex = Math.floor(Math.random() * images.length);
-    document.getElementById("randomImage").src = images[randomIndex];
+    const img = document.getElementById("randomImage");
+    img.src = images[randomIndex];
   </script>
 
 </body>
