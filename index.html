@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Foto sorpresa</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: black;
+    }
+    img {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="randomImage">
+
+  <script>
+    const images = [
+      "https://tusitio.com/foto1.jpg",
+      "https://tusitio.com/foto2.jpg",
+      "https://tusitio.com/foto3.jpg",
+      "https://tusitio.com/foto4.jpg"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("randomImage").src = images[randomIndex];
+  </script>
+
+</body>
+</html>
