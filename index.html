@@ -6,15 +6,35 @@
   <style>
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       margin: 0;
       background: black;
     }
+
     img {
-      max-width: 95vw;
-      max-height: 95vh;
+      max-width: 90vw;
+      max-height: 80vh;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
@@ -22,8 +42,9 @@
 
   <img id="randomImage" alt="Foto sorpresa">
 
+  <button onclick="cambiarFoto()">🔄 Otra foto</button>
+
   <script>
-    // Usa exactamente los nombres que aparecen en tu repositorio
     const images = [
       "Polish_20251202_173237970.png",
       "Polish_20251202_173103868.png",
@@ -32,9 +53,13 @@
       "Polish_20251202_174346498.jpg"
     ];
 
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const img = document.getElementById("randomImage");
-    img.src = images[randomIndex];
+    function cambiarFoto() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      document.getElementById("randomImage").src = images[randomIndex];
+    }
+
+    // Mostrar una imagen al cargar la página
+    cambiarFoto();
   </script>
 
 </body>
